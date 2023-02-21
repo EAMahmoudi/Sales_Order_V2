@@ -1,0 +1,13 @@
+{
+  "application": "cus.sd.salesorderv2.manage",
+  "version": "10.0.5",
+  "buildNumber": "105",
+  "buildId": "105",
+  "branch": "s4op-2022sp0",
+  "revision": "ad8527c794a058d03910be10426f39a38f17551e",
+  "GitURL": "",
+  "buildStatus": "P",
+  "translationComplete": "true",
+  "cidi": "",
+  "cfdCM": ""
+}

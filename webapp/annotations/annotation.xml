@@ -1,0 +1,2094 @@
+<!--
+
+    Copyright (C) 2009-2022 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.xml">
+		<edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Authorization.V1.xml">
+		<edmx:Include Alias="Auth" Namespace="Org.OData.Authorization.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
+		<edmx:Include Alias="Capabilities" Namespace="Org.OData.Capabilities.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470971/Communication.xml?api=v2">
+		<edmx:Include Alias="Communication" Namespace="com.sap.vocabularies.Communication.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+		<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Measures.V1.xml">
+		<edmx:Include Alias="Measures" Namespace="Org.OData.Measures.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+		<edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="sap/opu/odata4/sap/c_salesordermanage_srv/srvd/sap/c_salesordermanage_sd/0001/$metadata">
+		<edmx:Include Alias="SalesOrder" Namespace="com.sap.gateway.srvd.c_salesordermanage_sd.v0001"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm">
+			<Annotations Target="SalesOrder.SalesOrderManageType/SalesOrder">
+				<Annotation Term="Common.SemanticObjectUnavailableActions">
+					<Collection>
+						<String>editSalesOrderV2</String>
+						<String>manageSalesOrderV2</String>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.Container/SalesOrderManage">
+				<Annotation Term="UI.CreateHidden" Bool="true"/>
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="Filterable" Bool="true"/>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="PurchaseOrderByCustomer"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="SalesOrderDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="PricingDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="ServicesRenderedDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="BillingDocumentDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="RequestedDeliveryDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="CreationDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="LastChangeDate"/>
+									<PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>SalesOrganization</PropertyPath>
+								<PropertyPath>DeliveryBlockCriticality</PropertyPath>
+								<PropertyPath>BillingBlockCriticality</PropertyPath>
+								<PropertyPath>OvrlDeliveryStatusCriticality</PropertyPath>
+								<PropertyPath>TotalCreditCheckStsCriticality</PropertyPath>
+								<PropertyPath>OvrlSDDocRejectionStsCritlty</PropertyPath>
+								<PropertyPath>TotalBlockStatusCriticality</PropertyPath>
+								<PropertyPath>SlsDocOvrlGenIncompltnStsText</PropertyPath>
+								<PropertyPath>SlsDocOvrlIncompltnStsCritlty</PropertyPath>
+								<PropertyPath>HdrGenIncompltnStsCriticality</PropertyPath>
+								<PropertyPath>OvrlItmGenIncompltnStsCritlty</PropertyPath>
+								<PropertyPath>SalesDocApprovalStsCriticality</PropertyPath>
+								<PropertyPath>OvrlChmlCmplncStsCriticality</PropertyPath>
+								<PropertyPath>OvrlDngrsGdsStsCriticality</PropertyPath>
+								<PropertyPath>OvrlSftyDataSheetStsCritlty</PropertyPath>
+								<PropertyPath>OvrlTrdCmplncEmbargoStsCritlty</PropertyPath>
+								<PropertyPath>OvrlTrdCmplncSnctndListCritlty</PropertyPath>
+								<PropertyPath>OvrlTrdCmplncLglCtrlStsCritlty</PropertyPath>
+								<PropertyPath>SlsOrdDownPaymentStatusCritlty</PropertyPath>
+								<PropertyPath>UICT_TradeComplianceIsActive</PropertyPath>
+								<PropertyPath>PartnerDeterminationProcedure</PropertyPath>
+								<PropertyPath>UICT_BillingPlanType</PropertyPath>
+								<PropertyPath>UICT_CustomerCreditLimitAmount</PropertyPath>
+								<PropertyPath>UICT_LastChangeDateTime</PropertyPath>
+								<PropertyPath>UICT_WithdrawFromApproval</PropertyPath>
+								<PropertyPath>NumberOfAttachments</PropertyPath>
+								<PropertyPath>__CreateByAssociationControl</PropertyPath>
+								<PropertyPath>__EntityControl</PropertyPath>
+								<PropertyPath>__FieldControl</PropertyPath>
+								<PropertyPath>__OperationControl</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SalesOrderManageType">
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>setBillingBlock}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SetBillingBlock"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>removeBillingBlock}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.RemoveBillingBlock"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>setDeliveryBlock}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SetDeliveryBlock"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>removeDeliveryBlock}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.RemoveDeliveryBlock"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>updatePrices}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.UpdatePrices"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>IncompletenessInfo}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.ActivateIncompletenessInfo"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>withdrawFromApproval}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.WithdrawFromApproval(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderManageType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<Annotation Term="UI.Hidden">
+								<If>
+									<Eq>
+										<Path>SalesDocApprovalStatus</Path>
+										<String>A</String>
+									</Eq>
+									<Bool>false</Bool>
+									<Bool>true</Bool>
+								</If>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataFieldForIntentBasedNavigation">
+							<PropertyValue Property="SemanticObject" String="OutboundDelivery"/>
+							<PropertyValue Property="Action" String="createInWebGUI"/>
+							<PropertyValue Property="Label" String="{@i18n>createDelivery}"/>
+							<PropertyValue Property="RequiresContext" Bool="false"/>
+							<PropertyValue Property="Mapping">
+								<Collection>
+									<Record>
+										<PropertyValue Property="LocalProperty" PropertyPath="SalesOrder"/>
+										<PropertyValue Property="SemanticObjectProperty" String="SalesDocument"/>
+									</Record>
+								</Collection>
+							</PropertyValue>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="HeaderChange">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_Item/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="Messages">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+								<NavigationPropertyPath>_Item</NavigationPropertyPath>
+								<NavigationPropertyPath>_ShipToParty</NavigationPropertyPath>
+								<NavigationPropertyPath>_Text</NavigationPropertyPath>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_Partner</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>SAP__Messages</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeSoldToParty">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>SoldToParty</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_Item</NavigationPropertyPath>
+								<NavigationPropertyPath>_ShipToParty</NavigationPropertyPath>
+								<NavigationPropertyPath>_Partner</NavigationPropertyPath>
+								<NavigationPropertyPath>_Text</NavigationPropertyPath>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+								<NavigationPropertyPath>_CreditLimitDetails</NavigationPropertyPath>
+								<NavigationPropertyPath>_SlsVolumeNetAmtYearToDate</NavigationPropertyPath>
+								<NavigationPropertyPath>_SoldToPartyContactInfo</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeSalesOrganization">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>SalesOrganization</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ShipToParty</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+								<NavigationPropertyPath>_Partner</NavigationPropertyPath>
+								<NavigationPropertyPath>_Text</NavigationPropertyPath>
+								<NavigationPropertyPath>_CreditLimitDetails</NavigationPropertyPath>
+								<NavigationPropertyPath>_SlsVolumeNetAmtYearToDate</NavigationPropertyPath>
+								<NavigationPropertyPath>_SoldToPartyContactInfo</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="TransactionCurrencyChange">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>TransactionCurrency</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_BillingPlan/*</String>
+								<String>_BillingPlan/_BillingPlanItem/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_CreditLimitDetails</NavigationPropertyPath>
+								<NavigationPropertyPath>_SlsVolumeNetAmtYearToDate</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeBillingDocumentDate">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>BillingDocumentDate</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_BillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ItemUpdateAnyField">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_Item</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_Item</NavigationPropertyPath>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ShipToPartyUpdateAnyField">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ShipToParty</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ShipToParty</NavigationPropertyPath>
+								<NavigationPropertyPath>_Item</NavigationPropertyPath>
+								<NavigationPropertyPath>_Partner</NavigationPropertyPath>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeText">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_Text</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>__CreateByAssociationControl</String>
+								<String>__OperationControl</String>
+								<String>_Text/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangePricingElement">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_Item/*</String>
+								<String>_BillingPlan/_BillingPlanItem/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangePartner">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_Partner</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_Partner/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangePartnerID">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>_Partner/SDCustomerAddressID</PropertyPath>
+								<PropertyPath>_Partner/Customer</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_Partner/*</String>
+								<String>_ShipToParty/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeBillingPlan">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_BillingPlan</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_BillingPlan/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeBillingPlanItem">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_BillingPlan/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Text-->
+			<Annotations Target="SalesOrder.SalesOrderTextType">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="UpdateAnyTextDetails">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record>
+						<PropertyValue Property="TypeName" String="{@i18n>typeNameText}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n>typeNamePluralText}"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" String="{@i18n>titleText}"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Pricing-->
+			<Annotations Target="SalesOrder.HeaderPricingElementType">
+				<Annotation Term="UI.SelectionVariant" Qualifier="AllPriceElements">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType"></Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>allPriceElements}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="AllConditions">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionType"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/NE"/>
+												<PropertyValue Property="Low" String=" "/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>allConditions}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="ManualConditions">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionIsManuallyChanged"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Bool="true"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>manualConditions}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="StatisticalConditions">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionIsForStatistics"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Bool="true"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>statisticalConditions}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Criticality" Path="ConditionTypeActiveCriticality"/>
+							<PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+							<PropertyValue Property="Value" Path="ConditionType"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionTypeName"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ConditionRateValue"/>
+							<PropertyValue Property="Label" String="{@i18n>conditionAmountOrRatio}"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<Annotation Term="UI.Hidden">
+								<If>
+									<And>
+										<Eq>
+											<Path>ConditionCurrency</Path>
+											<String></String>
+										</Eq>
+										<Eq>
+											<Path>ConditionRateRatio</Path>
+											<String></String>
+										</Eq>
+									</And>
+									<Bool>true</Bool>
+									<Bool>false</Bool>
+								</If>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionQuantity"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionAmount"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionIsForStatistics"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionIsManuallyChanged"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ConditionBaseValue"/>
+							<PropertyValue Property="Label" String="{@i18n>conditionBasis}"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>createPricingElement}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreatePricingElement(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderManageType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionRateAmount"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionCurrency"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionRateRatio"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionRateRatioUnit"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionBaseAmount"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionBaseQuantity"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Partner-->
+			<Annotations Target="SalesOrder.HeaderPartnerType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PartnerFunctionForEdit"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BusinessPartner"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Address"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="SDDocPartnerAddrIsDocSpecific"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>createPartner}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreatePartner(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderManageType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>ChangeAddress}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.ChangeAddress(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.HeaderPartnerType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/Customer">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>KU</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/Supplier">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>LI</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/ContactPerson">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>AP</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/Personnel">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>PE</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/SDCustomerAddressID">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>KU</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/SDContactPersonAddressID">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>AP</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.HeaderPartnerType/AddressID">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Or>
+							<Eq>
+								<Path>SDDocumentPartnerType</Path>
+								<String>LI</String>
+							</Eq>
+							<Eq>
+								<Path>SDDocumentPartnerType</Path>
+								<String>PE</String>
+							</Eq>
+						</Or>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Billing Plan-->
+			<Annotations Target="SalesOrder.SalesOrderBillingPlanItemType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanBillingDate"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanDateCategory"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanDateDescriptionCode"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanAmountPercent"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanAmount"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingBlockReason"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanRelatedBillgStatus"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<PropertyValue Property="Criticality" Path="BillgPlnReltdBillingStsCritlty"/>
+							<PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ProposedBillingDocumentType"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>createBillingPlanItem}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreateBillingPlanItem(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderBillingPlanType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>setBillingBlock}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SetBillingBlock(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderBillingPlanItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>removeBillingBlock}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.RemoveBillingBlock(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderBillingPlanItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Item Entity-->
+			<Annotations Target="SalesOrder.SalesOrderItemType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="SalesOrderItem"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>setBillingBlock}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SetBillingBlock(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Product"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>removeBillingBlock}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.RemoveBillingBlock(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="RequestedQuantity"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>updatePrices}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.UpdatePrices(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConfdDelivQtyInOrderQtyUnit"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>setRejectionReason}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SetRejectionReason"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="SalesOrderItemCategory"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>removeRejectionReason}"/>
+							<PropertyValue Property="Action" String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.RemoveRejectionReason"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="MaterialByCustomer"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>proposeItems}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.ProposeItems(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderManageType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<Annotation Term="UI.Hidden">
+								<If>
+									<Eq>
+										<Path>SalesOrder</Path>
+										<String></String>
+									</Eq>
+									<Bool>false</Bool>
+									<Bool>true</Bool>
+								</If>
+							</Annotation>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="RequestedDeliveryDate"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConfirmedDeliveryDate"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="NetAmount"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="HigherLevelItem"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ItemMessages">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemText</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemPricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemPartner</NavigationPropertyPath>
+								<NavigationPropertyPath>_ScheduleLine</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemBillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>SAP__Messages</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="UpdateAnyItemDetails">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemPricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_ScheduleLine</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="UpdateItemCategory">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>SalesOrderItemCategory</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemText</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemPartner</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemPricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemBillingPlan</NavigationPropertyPath>
+								<NavigationPropertyPath>_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+								<NavigationPropertyPath>_ScheduleLine</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeItemBillingDocumentDate">
+					<Record>
+						<PropertyValue Property="SourceProperties">
+							<Collection>
+								<PropertyPath>BillingDocumentDate</PropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemBillingPlan</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeScheduleLine">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ScheduleLine</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ScheduleLine</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeItemPartner">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemPartner</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_ItemPartner/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeItemText">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemText</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_ItemText/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeItemPricingElement">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemPricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_ItemBillingPlan/_ItemBillingPlanItem/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemPricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeItemBillingPlan">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemBillingPlan</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_ItemBillingPlan/*</String>
+								<String>_ScheduleLine/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ChangeBillingPlanItem">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+								<String>_ItemBillingPlan/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SalesOrderItemType/NetAmount">
+				<Annotation Term="UI.DataFieldDefault">
+					<Record Type="UI.DataField">
+						<PropertyValue Property="Value" Path="NetAmount"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SalesOrderItemType/RequestedQuantity">
+				<Annotation Term="UI.DataFieldDefault">
+					<Record Type="UI.DataField">
+						<PropertyValue Property="Value" Path="RequestedQuantity"/>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ProductType/Product_Text">
+				<Annotation Term="UI.HiddenFilter"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.SalesOrderItemBillingPlanType/ReferenceBillingPlan">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>BillingPlanIsInHeader</Path>
+							<Bool>true</Bool>
+						</Eq>
+						<Bool>true</Bool>
+						<Bool>false</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Item Text -->
+			<Annotations Target="SalesOrder.ItemTextType">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="UpdateAnyItemTextDetails">
+					<Record>
+						<PropertyValue Property="SourceEntities">
+							<Collection>
+								<NavigationPropertyPath></NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record>
+						<PropertyValue Property="TypeName" String="{@i18n>typeNameItemText}"/>
+						<PropertyValue Property="TypeNamePlural" String="{@i18n>typeNamePluralItemText}"/>
+						<PropertyValue Property="Title">
+							<Record Type="UI.DataField">
+								<PropertyValue Property="Value" String="{@i18n>titleText}"/>
+							</Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Item Pricing -->
+			<Annotations Target="SalesOrder.ItemPricingElementType">
+				<Annotation Term="UI.SelectionVariant" Qualifier="AllPriceElements">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType"></Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>allPriceElements}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="ActivePriceElements">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionInactiveReason"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String=" "/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>activePriceElements}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="ActiveConditions">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionInactiveReason"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" String=" "/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionType"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/NE"/>
+												<PropertyValue Property="Low" String=" "/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>activeConditions}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="ManualConditions">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionIsManuallyChanged"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Bool="true"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>manualConditions}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionVariant" Qualifier="StatisticalConditions">
+					<Record Type="UI.SelectionVariantType">
+						<PropertyValue Property="SelectOptions">
+							<Collection>
+								<Record Type="UI.SelectOptionType">
+									<PropertyValue Property="PropertyName" PropertyPath="ConditionIsForStatistics"/>
+									<PropertyValue Property="Ranges">
+										<Collection>
+											<Record Type="UI.SelectionRangeType">
+												<PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+												<PropertyValue Property="Low" Bool="true"/>
+											</Record>
+										</Collection>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Text" String="{@i18n>statisticalConditions}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Criticality" Path="ConditionTypeActiveCriticality"/>
+							<PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+							<PropertyValue Property="Value" Path="ConditionType"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionTypeName"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ConditionRateValue"/>
+							<PropertyValue Property="Label" String="{@i18n>conditionAmountOrRatio}"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionQuantity"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionAmount"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionIsForStatistics"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionIsManuallyChanged"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ConditionBaseValue"/>
+							<PropertyValue Property="Label" String="{@i18n>conditionBasis}"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>createPricingElement}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreatePricingElement(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionRateAmount"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionCurrency"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionRateRatio"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionRateRatioUnit"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionBaseAmount"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ConditionBaseQuantity"/>
+							<Annotation Term="UI.Hidden"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Item Partner -->
+			<Annotations Target="SalesOrder.ItemPartnerType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PartnerFunctionForEdit"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#BusinessPartnerItem"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAnnotation">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Address"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="SDDocPartnerAddrIsDocSpecific"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PartnerIsSpecificForSDDocItem"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>createPartner}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreatePartner(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<Annotation Term="UI.Hidden" Path="_Item/UICT_CreatePartner"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>ChangeAddress}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.ChangeAddress(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.ItemPartnerType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/Customer">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>KU</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/Supplier">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>LI</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/ContactPerson">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>AP</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/Personnel">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>PE</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/SDCustomerAddressID">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>KU</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/SDContactPersonAddressID">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>SDDocumentPartnerType</Path>
+							<String>AP</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ItemPartnerType/AddressID">
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Or>
+							<Eq>
+								<Path>SDDocumentPartnerType</Path>
+								<String>LI</String>
+							</Eq>
+							<Eq>
+								<Path>SDDocumentPartnerType</Path>
+								<String>PE</String>
+							</Eq>
+						</Or>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Sales Order Item Billing Plan-->
+			<Annotations Target="SalesOrder.SalesOrderItemBillingPlanItemType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanBillingDate"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanDateCategory"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanDateDescriptionCode"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanAmountPercent"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanAmount"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingBlockReason"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="BillingPlanRelatedBillgStatus"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+							<PropertyValue Property="Criticality" Path="BillgPlnReltdBillingStsCritlty"/>
+							<PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ProposedBillingDocumentType"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>createBillingPlanItem}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.CreateBillingPlanItem(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemBillingPlanType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>setBillingBlock}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SetBillingBlock(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemBillingPlanItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>removeBillingBlock}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.RemoveBillingBlock(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderItemBillingPlanItemType)"/>
+							<PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/ChangeSet"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Actions on Root Entity -->
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderManageType)/HeaderBillingBlockReason">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.RemoveBillingBlock(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetDeliveryBlock(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetDeliveryBlock(SalesOrder.SalesOrderManageType)/DeliveryBlockReason">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.RemoveDeliveryBlock(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ActivateIncompletenessInfo(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/SAP__Messages</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.UpdatePrices(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.UpdatePrices(SalesOrder.SalesOrderManageType)/PricingType">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.WithdrawFromApproval(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Hidden">
+					<If>
+						<Eq>
+							<Path>_it/SalesDocApprovalStatus</Path>
+							<String>A</String>
+						</Eq>
+						<Bool>false</Bool>
+						<Bool>true</Bool>
+					</If>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ProposeItems(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_Item</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.CreatePartner(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_Partner</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.CreatePricingElement(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.DetermineOutputItems(SalesOrder.SalesOrderManageType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_OutputRequest</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_OutputRequest/_OutputRequestItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Actions on Item Entity -->
+			<Annotations Target="SalesOrder.UpdatePrices(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_SalesOrder/_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_ItemPricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.UpdatePrices(SalesOrder.SalesOrderItemType)/PricingType">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderItemType)/ItemBillingBlockReason">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.RemoveBillingBlock(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetRejectionReason(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_SalesOrder/_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_ItemPricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_SalesOrder/_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetRejectionReason(SalesOrder.SalesOrderItemType)/SalesDocumentRjcnReason">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.RemoveRejectionReason(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_SalesOrder/_PricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_ItemPricingElement</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_SalesOrder/_BillingPlan/_BillingPlanItem</NavigationPropertyPath>
+								<NavigationPropertyPath>_it/_ItemBillingPlan/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.CreatePricingElement(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_ItemPricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.CreatePartner(SalesOrder.SalesOrderItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_ItemPartner</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Actions on Ship To Party -->
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderShipToPartyType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/*</String>
+								<String>_it/_SalesOrder/_Partner/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_SalesOrder/_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderShipToPartyType)/BusinessPartnerName1">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderShipToPartyType)/Country">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderShipToPartyType)/CorrespondenceLanguage">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<!--        Annotations for Actions on Header Partner -->
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderPartnerType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Partner/*</String>
+								<String>_it/_SalesOrder/_ShipToParty/*</String>
+								<String>_it/_SalesOrder/_SoldToPartyContactInfo/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_SalesOrder/_PricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderPartnerType)/BusinessPartnerName1">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderPartnerType)/Country">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.HeaderPartnerType)/CorrespondenceLanguage">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<!--        Annotations for Actions on Billing Plan -->
+			<Annotations Target="SalesOrder.CreateBillingPlanItem(SalesOrder.SalesOrderBillingPlanType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_SalesOrder/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_BillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Actions on Billing Plan Item -->
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderBillingPlanItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderBillingPlanItemType)/BillingBlockReason">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.RemoveBillingBlock(SalesOrder.SalesOrderBillingPlanItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_SalesOrder/*</String>
+								<String>_it/_SalesOrder/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Actions on Item Partner -->
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.ItemPartnerType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/_Item/*</String>
+								<String>_it/_Item/_ItemPartner/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_Item/_ItemPricingElement</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.ItemPartnerType)/BusinessPartnerName1">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.ItemPartnerType)/Country">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.ChangeAddress(SalesOrder.ItemPartnerType)/CorrespondenceLanguage">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<!--        Annotations for Actions on Item Billing Plan -->
+			<Annotations Target="SalesOrder.CreateBillingPlanItem(SalesOrder.SalesOrderItemBillingPlanType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_Item/*</String>
+								<String>_it/_Item/_ScheduleLine/*</String>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="TargetEntities">
+							<Collection>
+								<NavigationPropertyPath>_it/_ItemBillingPlanItem</NavigationPropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Actions on Item Billing Plan Item -->
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderItemBillingPlanItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_ItemBillingPlan/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SalesOrder.SetBillingBlock(SalesOrder.SalesOrderBillingPlanItemType)/BillingBlockReason">
+				<Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+			</Annotations>
+			<Annotations Target="SalesOrder.RemoveBillingBlock(SalesOrder.SalesOrderItemBillingPlanItemType)">
+				<Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+					<Record>
+						<PropertyValue Property="TargetProperties">
+							<Collection>
+								<String>_it/*</String>
+								<String>_it/_ItemBillingPlan/_Item/*</String>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<!--        Annotations for Output Items -->
+			<Annotations Target="SalesOrder.OutputRequestItemType">
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataFieldForAction">
+							<PropertyValue Property="Label" String="{@i18n>DetermineOutputItems}"/>
+							<PropertyValue Property="Action"
+								String="com.sap.gateway.srvd.c_salesordermanage_sd.v0001.DetermineOutputItems(com.sap.gateway.srvd.c_salesordermanage_sd.v0001.SalesOrderManageType)"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OutputRequestItem"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OutputRequestItemStatus"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="DispatchTime"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OutputDocumentType"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OutputChannel"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="LastChangeDateTime"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OutputBinaryData"/>
+							<Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

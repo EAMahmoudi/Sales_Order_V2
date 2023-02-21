@@ -1,0 +1,33 @@
+<!--
+
+    Copyright (C) 2009-2022 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<l:VerticalLayout id="availabilityStatusLayout" core:require="{handler: 'cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController'}">
+		<ObjectStatus
+			id="availabilityStatusLink"
+			active="true"
+			text="{ 
+				parts: [ 
+					{path:'RequestedDeliveryDate'},
+					{path:'ConfirmedDeliveryDate'},
+					{path:'RequestedQuantity'},
+					{path:'ConfdDelivQtyInOrderQtyUnit'},
+					{path: 'i18n>available'},
+					{path: 'i18n>partiallyAvailable'},
+					{path: 'i18n>delayed'},
+					{path: 'i18n>notAvailable'}
+				], 
+				formatter:'handler.getTextForAvailabilityStatusColumn'}"
+			state="{ 
+				parts: [ 
+					{path:'RequestedDeliveryDate'},
+					{path:'ConfirmedDeliveryDate'},
+					{path:'RequestedQuantity'},
+					{path:'ConfdDelivQtyInOrderQtyUnit'}
+				], 
+				formatter:'handler.getCriticalityForAvailabilityStatusColumn'}"
+			press="handler.onAvailabilityStatusLinkPressed" />
+	</l:VerticalLayout>
+</core:FragmentDefinition>

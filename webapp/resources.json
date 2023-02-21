@@ -1,0 +1,1300 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/Component.js",
+			"size": 295,
+			"isDebug": true,
+			"required": [
+				"sap/fe/core/AppComponent.js"
+			]
+		},
+		{
+			"name": "Component-h2-preload-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/Component-h2-preload.js",
+			"size": 24176,
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/cus/sd/lib/processflow/component/sales/Component.js",
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js",
+				"sap/fe/core/AppComponent.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/ControllerExtension.js",
+				"sap/ui/layout/VerticalLayout.js"
+			],
+			"included": [
+				"cus/sd/salesorderv2/manage/Component.js",
+				"cus/sd/salesorderv2/manage/manifest.json",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ar.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_bg.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ca.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_da.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_el.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_sappsd.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_saptrc.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_et.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_it.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_iw.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ja.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_kk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ko.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lt.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lv.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ms.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_nl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pt.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ro.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ru.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sh.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sv.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_th.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_tr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_uk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_vi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_CN.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_TW.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ar.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_bg.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ca.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_da.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_el.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en_US_sappsd.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en_US_saptrc.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_et.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_fi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_fr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_it.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_iw.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ja.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_kk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ko.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_lt.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_lv.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ms.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_nl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_pt.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ro.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ru.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sh.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sv.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_th.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_tr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_uk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_vi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_zh_CN.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_zh_TW.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_sv.properties",
+				"cus/sd/salesorderv2/manage/reuse/controller/AddressDetailsController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/AttachmentController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ChangeDocController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/CustomNavigation.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/CustomValidation.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ListReportExtension.controller.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ObjectPageExtension.controller.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ProcessFlowController.js",
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"cus/sd/salesorderv2/manage/reuse/view/availabilityStatusColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/changeDoc.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/overallStatusListReportColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/partnerAddressDetailsColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/processflow.fragment.xml"
+			]
+		},
+		{
+			"name": "Component-h2-preload.js",
+			"module": "cus/sd/salesorderv2/manage/Component-h2-preload.js",
+			"size": 24089,
+			"merged": true,
+			"required": [
+				"sap/cus/sd/lib/processflow/component/sales/Component.js",
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js",
+				"sap/fe/core/AppComponent.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/ControllerExtension.js",
+				"sap/ui/layout/VerticalLayout.js"
+			],
+			"included": [
+				"cus/sd/salesorderv2/manage/Component.js",
+				"cus/sd/salesorderv2/manage/manifest.json",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ar.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_bg.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ca.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_da.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_el.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_sappsd.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_saptrc.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_et.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_it.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_iw.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ja.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_kk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ko.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lt.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lv.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ms.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_nl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pt.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ro.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ru.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sh.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sv.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_th.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_tr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_uk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_vi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_CN.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_TW.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ar.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_bg.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ca.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_da.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_el.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en_US_sappsd.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en_US_saptrc.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_et.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_fi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_fr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_it.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_iw.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ja.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_kk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ko.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_lt.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_lv.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ms.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_nl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_pt.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ro.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ru.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sh.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sv.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_th.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_tr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_uk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_vi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_zh_CN.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_zh_TW.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_sv.properties",
+				"cus/sd/salesorderv2/manage/reuse/controller/AddressDetailsController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/AttachmentController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ChangeDocController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/CustomNavigation.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/CustomValidation.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ListReportExtension.controller.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ObjectPageExtension.controller.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ProcessFlowController.js",
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"cus/sd/salesorderv2/manage/reuse/view/availabilityStatusColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/changeDoc.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/overallStatusListReportColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/partnerAddressDetailsColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/processflow.fragment.xml"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "cus/sd/salesorderv2/manage/Component-preload.js",
+			"size": 225726,
+			"merged": true,
+			"required": [
+				"sap/cus/sd/lib/processflow/component/sales/Component.js",
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js",
+				"sap/fe/core/AppComponent.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/mvc/ControllerExtension.js",
+				"sap/ui/layout/VerticalLayout.js"
+			],
+			"included": [
+				"cus/sd/salesorderv2/manage/Component.js",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ar.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_bg.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ca.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_da.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_el.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_sappsd.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_saptrc.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_et.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_it.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_iw.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ja.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_kk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ko.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lt.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lv.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ms.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_nl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pt.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ro.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ru.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sh.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sl.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sv.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_th.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_tr.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_uk.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_vi.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_CN.properties",
+				"cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_TW.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ar.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_bg.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ca.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_da.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_el.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en_US_sappsd.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_en_US_saptrc.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_et.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_fi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_fr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_it.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_iw.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ja.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_kk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ko.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_lt.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_lv.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ms.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_nl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_pt.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ro.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_ru.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sh.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sl.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_sv.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_th.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_tr.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_uk.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_vi.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_zh_CN.properties",
+				"cus/sd/salesorderv2/manage/i18n/i18n_zh_TW.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_cs.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_de.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_en.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_es.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_hu.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_no.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_pl.properties",
+				"cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_sv.properties",
+				"cus/sd/salesorderv2/manage/manifest.json",
+				"cus/sd/salesorderv2/manage/reuse/controller/AddressDetailsController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/AttachmentController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ChangeDocController.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/CustomNavigation.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/CustomValidation.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ListReportExtension.controller.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ObjectPageExtension.controller.js",
+				"cus/sd/salesorderv2/manage/reuse/controller/ProcessFlowController.js",
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"cus/sd/salesorderv2/manage/reuse/view/availabilityStatusColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/changeDoc.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/overallStatusListReportColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/partnerAddressDetailsColumn.fragment.xml",
+				"cus/sd/salesorderv2/manage/reuse/view/processflow.fragment.xml"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "cus/sd/salesorderv2/manage/Component.js",
+			"size": 250,
+			"required": [
+				"sap/fe/core/AppComponent.js"
+			]
+		},
+		{
+			"name": "annotations/annotation.xml",
+			"size": 89019
+		},
+		{
+			"name": "i18n/HeaderOPi18n.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n.properties",
+			"size": 295,
+			"locale": "",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ar.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ar.properties",
+			"size": 331,
+			"locale": "ar",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_bg.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_bg.properties",
+			"size": 457,
+			"locale": "bg",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ca.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ca.properties",
+			"size": 181,
+			"locale": "ca",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_cs.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_cs.properties",
+			"size": 215,
+			"locale": "cs",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_da.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_da.properties",
+			"size": 158,
+			"locale": "da",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_de.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_de.properties",
+			"size": 172,
+			"locale": "de",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_el.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_el.properties",
+			"size": 393,
+			"locale": "el",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_en.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en.properties",
+			"size": 166,
+			"locale": "en",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_en_US_sappsd.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_sappsd.properties",
+			"size": 496,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_en_US_saptrc.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_en_US_saptrc.properties",
+			"size": 220,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_es.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_es.properties",
+			"size": 180,
+			"locale": "es",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_et.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_et.properties",
+			"size": 192,
+			"locale": "et",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_fi.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fi.properties",
+			"size": 166,
+			"locale": "fi",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_fr.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_fr.properties",
+			"size": 203,
+			"locale": "fr",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_hi.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hi.properties",
+			"size": 418,
+			"locale": "hi",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_hr.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hr.properties",
+			"size": 166,
+			"locale": "hr",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_hu.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_hu.properties",
+			"size": 194,
+			"locale": "hu",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_it.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_it.properties",
+			"size": 170,
+			"locale": "it",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_iw.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_iw.properties",
+			"size": 293,
+			"locale": "iw",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ja.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ja.properties",
+			"size": 246,
+			"locale": "ja",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_kk.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_kk.properties",
+			"size": 371,
+			"locale": "kk",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ko.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ko.properties",
+			"size": 270,
+			"locale": "ko",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_lt.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lt.properties",
+			"size": 197,
+			"locale": "lt",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_lv.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_lv.properties",
+			"size": 234,
+			"locale": "lv",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ms.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ms.properties",
+			"size": 172,
+			"locale": "ms",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_nl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_nl.properties",
+			"size": 167,
+			"locale": "nl",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_no.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_no.properties",
+			"size": 164,
+			"locale": "no",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_pl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pl.properties",
+			"size": 172,
+			"locale": "pl",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_pt.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_pt.properties",
+			"size": 172,
+			"locale": "pt",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ro.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ro.properties",
+			"size": 214,
+			"locale": "ro",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_ru.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_ru.properties",
+			"size": 353,
+			"locale": "ru",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_sh.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sh.properties",
+			"size": 173,
+			"locale": "sh",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_sk.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sk.properties",
+			"size": 215,
+			"locale": "sk",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_sl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sl.properties",
+			"size": 169,
+			"locale": "sl",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_sv.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_sv.properties",
+			"size": 163,
+			"locale": "sv",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_th.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_th.properties",
+			"size": 366,
+			"locale": "th",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_tr.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_tr.properties",
+			"size": 207,
+			"locale": "tr",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_uk.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_uk.properties",
+			"size": 431,
+			"locale": "uk",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_vi.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_vi.properties",
+			"size": 262,
+			"locale": "vi",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_zh_CN.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_CN.properties",
+			"size": 210,
+			"locale": "zh_CN",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/HeaderOPi18n_zh_TW.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/HeaderOPi18n_zh_TW.properties",
+			"size": 210,
+			"locale": "zh_TW",
+			"raw": "i18n/HeaderOPi18n.properties"
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n.properties",
+			"size": 4460,
+			"locale": "",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ar.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ar.properties",
+			"size": 8138,
+			"locale": "ar",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_bg.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_bg.properties",
+			"size": 11345,
+			"locale": "bg",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ca.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ca.properties",
+			"size": 4745,
+			"locale": "ca",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_cs.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_cs.properties",
+			"size": 5078,
+			"locale": "cs",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_da.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_da.properties",
+			"size": 4480,
+			"locale": "da",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_de.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_de.properties",
+			"size": 4571,
+			"locale": "de",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_el.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_el.properties",
+			"size": 10229,
+			"locale": "el",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_en.properties",
+			"size": 4334,
+			"locale": "en",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_sappsd.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_en_US_sappsd.properties",
+			"size": 11859,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_saptrc.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_en_US_saptrc.properties",
+			"size": 5776,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_es.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_es.properties",
+			"size": 4737,
+			"locale": "es",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_et.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_et.properties",
+			"size": 4555,
+			"locale": "et",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fi.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_fi.properties",
+			"size": 4460,
+			"locale": "fi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fr.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_fr.properties",
+			"size": 4792,
+			"locale": "fr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hi.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_hi.properties",
+			"size": 8940,
+			"locale": "hi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hr.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_hr.properties",
+			"size": 4548,
+			"locale": "hr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hu.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_hu.properties",
+			"size": 5433,
+			"locale": "hu",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_it.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_it.properties",
+			"size": 4599,
+			"locale": "it",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_iw.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_iw.properties",
+			"size": 7455,
+			"locale": "iw",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ja.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ja.properties",
+			"size": 5454,
+			"locale": "ja",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_kk.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_kk.properties",
+			"size": 10058,
+			"locale": "kk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ko.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ko.properties",
+			"size": 5346,
+			"locale": "ko",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lt.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_lt.properties",
+			"size": 4964,
+			"locale": "lt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lv.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_lv.properties",
+			"size": 5310,
+			"locale": "lv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ms.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ms.properties",
+			"size": 4412,
+			"locale": "ms",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_nl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_nl.properties",
+			"size": 4468,
+			"locale": "nl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_no.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_no.properties",
+			"size": 4417,
+			"locale": "no",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_pl.properties",
+			"size": 4742,
+			"locale": "pl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pt.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_pt.properties",
+			"size": 4875,
+			"locale": "pt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ro.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ro.properties",
+			"size": 4901,
+			"locale": "ro",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ru.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_ru.properties",
+			"size": 9874,
+			"locale": "ru",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sh.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_sh.properties",
+			"size": 4496,
+			"locale": "sh",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sk.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_sk.properties",
+			"size": 5022,
+			"locale": "sk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_sl.properties",
+			"size": 4506,
+			"locale": "sl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sv.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_sv.properties",
+			"size": 4460,
+			"locale": "sv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_th.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_th.properties",
+			"size": 9743,
+			"locale": "th",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_tr.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_tr.properties",
+			"size": 5074,
+			"locale": "tr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_uk.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_uk.properties",
+			"size": 10257,
+			"locale": "uk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_vi.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_vi.properties",
+			"size": 6457,
+			"locale": "vi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_CN.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_zh_CN.properties",
+			"size": 5137,
+			"locale": "zh_CN",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_TW.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/i18n_zh_TW.properties",
+			"size": 5113,
+			"locale": "zh_TW",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_cs.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_cs.properties",
+			"size": 127,
+			"locale": "cs",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_de.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_de.properties",
+			"size": 134,
+			"locale": "de",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_en.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_en.properties",
+			"size": 113,
+			"locale": "en",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_es.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_es.properties",
+			"size": 138,
+			"locale": "es",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_hu.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_hu.properties",
+			"size": 127,
+			"locale": "hu",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_no.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_no.properties",
+			"size": 117,
+			"locale": "no",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_pl.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_pl.properties",
+			"size": 107,
+			"locale": "pl",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "i18n/terminologies/retail/i18n.terminologies.retail_sv.properties",
+			"module": "cus/sd/salesorderv2/manage/i18n/terminologies/retail/i18n.terminologies.retail_sv.properties",
+			"size": 108,
+			"locale": "sv",
+			"raw": "i18n/terminologies/retail/i18n.terminologies.retail.properties"
+		},
+		{
+			"name": "images/ManageSalesOrder.jpg",
+			"size": 198253
+		},
+		{
+			"name": "manifest.json",
+			"module": "cus/sd/salesorderv2/manage/manifest.json",
+			"size": 30600
+		},
+		{
+			"name": "resources.json",
+			"size": 32441
+		},
+		{
+			"name": "reuse/controller/AddressDetailsController-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/AddressDetailsController.js",
+			"size": 813,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/AddressDetailsController.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/AddressDetailsController.js",
+			"size": 562,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/AttachmentController-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/AttachmentController.js",
+			"size": 803,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/AttachmentController.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/AttachmentController.js",
+			"size": 555,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/AvailabilityController-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController.js",
+			"size": 3052,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/AvailabilityController.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController.js",
+			"size": 1303,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ChangeDocController-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ChangeDocController.js",
+			"size": 891,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ChangeDocController.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ChangeDocController.js",
+			"size": 601,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/CustomNavigation-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/CustomNavigation.js",
+			"size": 519,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/CustomNavigation.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/CustomNavigation.js",
+			"size": 365,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/CustomValidation-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/CustomValidation.js",
+			"size": 841,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/CustomValidation.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/CustomValidation.js",
+			"size": 516,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ListReportExtension-dbg.controller.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ListReportExtension.controller.js",
+			"size": 1187,
+			"isDebug": true,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ListReportExtension.controller.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ListReportExtension.controller.js",
+			"size": 761,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ObjectPageExtension-dbg.controller.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ObjectPageExtension.controller.js",
+			"size": 1187,
+			"isDebug": true,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ObjectPageExtension.controller.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ObjectPageExtension.controller.js",
+			"size": 761,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ProcessFlowController-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ProcessFlowController.js",
+			"size": 1203,
+			"isDebug": true,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/controller/ProcessFlowController.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/controller/ProcessFlowController.js",
+			"size": 647,
+			"required": [
+				"sap/cus/sd/lib/slsdoc/manage/util/UtilityHelper.js"
+			]
+		},
+		{
+			"name": "reuse/util/Formatter-dbg.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+			"size": 432,
+			"isDebug": true
+		},
+		{
+			"name": "reuse/util/Formatter.js",
+			"module": "cus/sd/salesorderv2/manage/reuse/util/Formatter.js",
+			"size": 355
+		},
+		{
+			"name": "reuse/view/availabilityStatusColumn.fragment.xml",
+			"module": "cus/sd/salesorderv2/manage/reuse/view/availabilityStatusColumn.fragment.xml",
+			"size": 1125,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/controller/AvailabilityController.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "reuse/view/changeDoc.fragment.xml",
+			"module": "cus/sd/salesorderv2/manage/reuse/view/changeDoc.fragment.xml",
+			"size": 521,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "reuse/view/overallStatusListReportColumn.fragment.xml",
+			"module": "cus/sd/salesorderv2/manage/reuse/view/overallStatusListReportColumn.fragment.xml",
+			"size": 524,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/controller/ProcessFlowController.js",
+				"sap/m/Link.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "reuse/view/partnerAddressDetailsColumn.fragment.xml",
+			"module": "cus/sd/salesorderv2/manage/reuse/view/partnerAddressDetailsColumn.fragment.xml",
+			"size": 478,
+			"required": [
+				"cus/sd/salesorderv2/manage/reuse/controller/AddressDetailsController.js",
+				"sap/m/Link.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "reuse/view/processflow.fragment.xml",
+			"module": "cus/sd/salesorderv2/manage/reuse/view/processflow.fragment.xml",
+			"size": 449,
+			"required": [
+				"sap/cus/sd/lib/processflow/component/sales/Component.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "version.json",
+			"size": 303
+		}
+	]
+}
